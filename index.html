@@ -2,17 +2,26 @@
 <html>
 <head>
 	<title>EventAIO - Event Management Application</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+  		$("p").click(function(){
+    		$("#content2-p").fadeOut();
+    		$("#div2").fadeIn("slow");
+    		$("#div3").fadeIn(3000);
+ 		 });
+		});
+	</script>
 	<style type="text/css">
 		body{
-			background-image: linear-gradient(to right, rgba(38, 27, 98, 1), rgba(208, 204, 255, 1));
-			color: white;
+			background-image: linear-gradient(to right, rgba(38, 27, 98, 0.9), rgba(208, 204, 255, 1));
+			color: black;
 		}
 		h1{
 			font-size: 36px;
 		}
-		div{
-			margin-top: 20px;
-			margin-bottom: 20px;
+		table{
+			padding: 20px;
 		}
 		hr{
 			border-color: rgba(38, 27, 98, 1);
@@ -31,13 +40,15 @@
 		}
 		#content1-p1{
 			font-size: 14px;
+			text-align: justify;
 		}
-		#content1-p{
+		#content1-p, #content1-p, li{
 			font-size: 12px;
 		}
 		#content1-h2, #content2-h2{
-			text-decoration: underline;
+			color: rgba(208, 204, 255, 1);
 			font-size: 20px;
+			text-decoration: underline;
 		}
 		#span3{
 			font-weight: 600;
@@ -47,10 +58,10 @@
 </head>
 <body >
 	<div id="top" align="center">
-		<table>
+		<table style="table-layout: fixed; border: 2px solid black" width="65%">
 			<tr>
-				<td id="top-tr1" align="right" width="50%">
-					<img src="idea.png" width="50%">
+				<td id="top-tr1" align="right">
+					<img src="idea.png" width="100%">
 				</td>
 				<td id="top-tr2">
 					<h1>EventAIO <br>
@@ -63,52 +74,110 @@
 	</div>
 	<hr>
 	<div id="content1" align="center">
-		<h2 id="content1-h2">Introduction</h2>
-		<p id="content1-p1">
-			To ensure events to hold as planned, safeguard the flow of the event, increase participants’ satisfaction level, and deliver a unique experience to the participants, a suitable and good event management system is required. EventAIO is an application developed with the aim to provide a more convenient way for event organizer in managing event and deliver a better experience for participants during event check-in process. The target user for the application are students and staff from Malaysia university. 
-		</p>
-		<h2 id="content1-h2">Problem Statement</h2>
-		<p id="content1-p">
-			<span id="span3"> 1. Intranet web-based event management system: </span> 
-			Difficult in urgent update of information due to unreacheable organization’s private network.
-		</p>
-		<p id="content1-p">
-			<span id="span3"> 2. Manual check-in: </span>
-			<br>&#8227; Unexpected damage on the submitted form (eg: the information on the form is blurred by water)
-			<br>&#8227; Check-in form missing
-			<br>&#8227; Human error (eg: spelling) during data entry due to vast amount of information to be key-in for record
-			<br>&#8227; Time consuming to queue and wait for the turn to check-in at the counter
-		</p>
-		<p id="content1-p">
-			<span id="span3"> 3. Fake attendance: </span>
-			Not attending event yet request other participants to help them to check-in or submit check-in form
-		</p>
-		<h2 id="content1-h2">Other Check-In Method</h2>
-		<p id="content1-p">
-			<span id="span3"> 1. Scan QR code: </span> Fake attendance by requesting QR code from participants and scan to check-in without attending the event since participants’ location is not tracked.
-		</p>
-		<p id="content1-p">
-			<span id="span3"> 2. Face recognition: </span>
-			<br>&#8227; Performance is influenced by several factors, including quality or resolution of collected photos, image capture conditions, and individual’s posture
-			<br>&#8227; Challenges remain in recognising twins and face having different accessories such as glasses and beard.
-		</p>
+		<table style="table-layout: fixed; border: 2px solid black" width="45%">
+			<tr>
+				<td>
+					<h2 id="content1-h2">Introduction</h2>
+					<p id="content1-p1">
+						To ensure events to hold as planned, safeguard the flow of the event, increase participants’ satisfaction level, and deliver a unique experience to the participants, a suitable and good event management system is required. EventAIO is an application developed with the aim to provide a more convenient way for event organizer in managing event and deliver a better experience for participants during event check-in process. The target user for the application are students and staff from Malaysia university. 
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2 id="content1-h2">Problem Statement</h2>
+					<p id="content1-p">
+						<span id="span3"> 1. Intranet web-based event management system: </span> 
+						<ul>
+							<li>Difficult in urgent update of information due to unreacheable organization’s private network.</li>
+						</ul>
+					</p>
+					<p id="content1-p">
+						<span id="span3"> 2. Manual check-in: </span>
+						<ul>
+							<li>Unexpected damage on the submitted form (eg: the information on the form is blurred by water)</li>
+							<li>Check-in form missing</li>
+							<li>Human error (eg: spelling) during data entry due to vast amount of information to be key-in for record</li>
+							<li>Time consuming to queue and wait for the turn to check-in at the counter</li>
+						</ul>
+					</p>
+					<p id="content1-p">
+						<span id="span3"> 3. Fake attendance: </span>
+						<ul>
+							<li>Not attending event yet request other participants to help them to check-in or submit check-in form</li>
+						</ul>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2 id="content1-h2">Other Check-In Method</h2>
+					<p id="content1-p">
+						<span id="span3"> 1. Scan QR code: </span> Fake attendance by requesting QR code from participants and scan to check-in without attending 	the event since participants’ location is not tracked.
+					</p>
+					<p id="content1-p">
+						<span id="span3"> 2. Face recognition: </span>
+						<ul>
+							<li>Performance is influenced by several factors, including quality or resolution of collected photos, image capture conditions, and individual’s posture</li>
+							<li>Challenges remain in recognising twins and face having different accessories such as glasses and beard</li>
+						</ul>
+					</p>
+				</td>
+			<tr>
+		</table>
 	</div>
 	<hr>
 	<div id="content2" align="center">
-		<h2 id="content2-h2">Development Tools</h2>
-		<p id="content1-p">
-			&#8227; IDE: Android Studio
-			<br>&#8227; Language: Java, XML
-			<br>&#8227; Database: Firsebase Realtime Database & Cloud Storage
-		</p>
-		<h2 id="content2-h2">Functions</h2>
-		<p id="content1-p">
-			<span id="span3"> For Organizer </span>
-			&#8227; IDE: Android Studio
-			<br>&#8227; Language: Java, XML
-			<br>&#8227; Database: Firsebase Realtime Database & Cloud Storage
-			<span id="span3"> For Participants </span>
-		</p>
+		<table style="table-layout: fixed; border: 2px solid black" width="45%">
+			<tr>
+				<td colspan="2">
+					<h2 id="content2-h2">Development Tools</h2>
+					<p id="content2-p">
+							&#8227; IDE: Android Studio
+						<br>&#8227; Language: Java, XML
+						<br>&#8227; Database: Firsebase Realtime Database & Cloud Storage
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="border: 2px solid black">
+					<h2 id="content2-h2">Functions</h2>
+				</td>
+			</tr>
+			<tr>
+				<td style="border: 2px solid black">
+					<p id="content2-p">
+						<span id="span3"> For Organizer(Staff or Club's Secretary) </span>
+						<ul>
+							<li>Login/ Logout/ Retrieve password/ Change password</li>
+							<li>View event details</li>
+							<li>Search event</li>
+							<li>Add/ Edit/ Delete created event</li>
+							<li>View participants list</li>
+							<li>View/Download QR Code</li>
+							<li>View/ Add/ Delete venue</li>
+							<li>Edit venue valid range</li>
+							<li>Add new user</li>
+							<li>View/ Update profile name</li>
+						</ul>
+					</p>	
+				</td>
+				<td style="border: 2px solid black">
+					<p id="content2-p">
+						<span id="span3"> For Participants </span>
+						<ul>
+							<li>Login/ Logout/ Retrieve password/ Change password</li>
+							<li>View event details</li>
+							<li>Search event</li>
+							<li>Check-in event</li>
+							<li>View/ Download participated events list</li>
+							<li>View/ Add/ Cancel & delete reminder</li>
+							<li>View/ Update profile name</li>
+						</ul>
+					</p>	
+				</td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>
