@@ -4,7 +4,7 @@
 	<title>EventAIO - Event Management Application</title>
 	<style type="text/css">
 		body{
-			background-image: linear-gradient(to right, rgba(204, 248, 241, 1), rgba(208, 204, 255, 1), rgba(204, 248, 241, 1));
+			background-image: linear-gradient(to right, rgba(208, 204, 255, 1), rgba(204, 248, 241, 1));
 		}
 		h1{
 			color: rgba(38, 27, 98, 1);
@@ -15,6 +15,20 @@
 		}
 		hr{
 			border-color: rgba(38, 27, 98, 1);
+		}
+		a{
+			font-weight: bold;
+			color: rgba(38, 27, 98, 1);
+		}
+		.navigation-a{
+			color: rgba(208, 204, 255, 1);
+			font-size: 12px;
+			font-weight: bold;
+			padding-right: 15px;
+		}
+		.navigation{
+			padding: 10px;
+			background-color: rgba(38, 27, 98, 1);
 		}
 		#top-tr1{
 			padding-right: 20px;
@@ -28,10 +42,6 @@
 		#top-p{
 			font-size: 18px;
 		}
-		#content1-p1{
-			font-size: 14px;
-			text-align: justify;
-		}
 		#content1-p, #content2-p, li{
 			font-size: 12px;
 		}
@@ -41,35 +51,51 @@
 			text-decoration: underline;
 		}
 		#span3{
-			font-weight: 600;
+			font-weight: bold;
 			font-size: 14px;
 		}
 	</style>
 </head>
-<body >
+<body>
+	<div class="navigation" align="right">
+		<a class="navigation-a" href="#top">Home</a>
+		<a class="navigation-a" href="#content1">Problems</a>
+		<a class="navigation-a" href="#content2">Development</a>
+		<a class="navigation-a" href="#bottom">Download</a>
+	</div>
 	<div id="top" align="center">
 		<table style="table-layout: fixed; border: 2px solid black">
 			<tr>
-				<td id="top-tr1" align="right">
-					<img src="idea.png" width="40%">
+				<td id="top-tr1" align="right" width="30%" style="border: 2px solid black">
+					<img src="idea.png" width="100%">
 				</td>
-				<td id="top-tr2" width="70%">
+				<td id="top-tr2">
 					<h1>EventAIO <br>
 					<span id="span1">Event Management Application <br> with QR Code <br> and Geolocation Technology</span></h1>
-					<p id="top-p">A more convenient way to manage event ... ... <br>
-					<span id="span2"> ... ... A better way to check-in for an event </span> </p>
+					<p id="top-p">More convenient way to manage event ... ... <br>
+					<span id="span2"> ... ... Better way to check-in for an event </span> </p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<p id="content1-p" style="text-align: justify;">
+						To ensure events to hold as planned, safeguard the flow of the event, increase participants’ satisfaction level, and deliver a unique experience to the participants, a suitable and good event management system is required. EventAIO is an application developed with the aim to provide a more convenient way for event organizer in managing event and deliver a better experience for participants during event check-in process.
+					</p>
 				</td>
 			</tr>
 		</table>
 	</div>
 	<hr>
 	<div id="content1" align="center">
-		<table style="table-layout: fixed; border: 2px solid black">
+		<table style="table-layout: fixed; border: 2px solid black" width="100%">
 			<tr>
 				<td>
-					<h2 id="content1-h2">Introduction</h2>
-					<p id="content1-p1">
-						To ensure events to hold as planned, safeguard the flow of the event, increase participants’ satisfaction level, and deliver a unique experience to the participants, a suitable and good event management system is required. EventAIO is an application developed with the aim to provide a more convenient way for event organizer in managing event and deliver a better experience for participants during event check-in process. The target user for the application are students and staff from Malaysia university. 
+					<h2 id="content1-h2">Target User</h2>
+					<p id="content1-p">
+						<ul>
+							<li>Malaysia university student</li>
+							<li>Malaysia university student</li>
+						</ul>
 					</p>
 				</td>
 			</tr>
@@ -77,13 +103,13 @@
 				<td>
 					<h2 id="content1-h2">Problem Statement</h2>
 					<p id="content1-p">
-						<span id="span3"> 1. Intranet web-based event management system: </span> 
+						<span id="span3">1. Intranet web-based event management system:</span> 
 						<ul>
 							<li>Difficult in urgent update of information due to unreacheable organization’s private network.</li>
 						</ul>
 					</p>
 					<p id="content1-p">
-						<span id="span3"> 2. Manual check-in: </span>
+						<span id="span3">2. Manual check-in:</span>
 						<ul>
 							<li>Unexpected damage on the submitted form (eg: the information on the form is blurred by water)</li>
 							<li>Check-in form missing</li>
@@ -92,7 +118,7 @@
 						</ul>
 					</p>
 					<p id="content1-p">
-						<span id="span3"> 3. Fake attendance: </span>
+						<span id="span3">3. Fake attendance:</span>
 						<ul>
 							<li>Not attending event yet request other participants to help them to check-in or submit check-in form</li>
 						</ul>
@@ -103,10 +129,13 @@
 				<td>
 					<h2 id="content1-h2">Other Check-In Method</h2>
 					<p id="content1-p">
-						<span id="span3"> 1. Scan QR code: </span> Fake attendance by requesting QR code from participants and scan to check-in without attending 	the event since participants’ location is not tracked.
+						<span id="span3">1. Scan QR code:</span> 
+						<ul>
+							<li>Fake attendance by requesting QR code from participants and scan to check-in without attending 	the event since participants’ location is not tracked.</li>
+						</ul>
 					</p>
 					<p id="content1-p">
-						<span id="span3"> 2. Face recognition: </span>
+						<span id="span3">2. Face recognition:</span>
 						<ul>
 							<li>Performance is influenced by several factors, including quality or resolution of collected photos, image capture conditions, and individual’s posture</li>
 							<li>Challenges remain in recognising twins and face having different accessories such as glasses and beard</li>
@@ -118,9 +147,18 @@
 	</div>
 	<hr>
 	<div id="content2" align="center">
-		<table style="table-layout: fixed; border: 2px solid black">
+		<table style="table-layout: fixed; border: 2px solid black" width="100%">
 			<tr>
-				<td colspan="2">
+				<td>
+					<h2 id="content2-h2">Methodology</h2>
+					<p id="content2-p">
+						<span id="span3">Rapid Application Development</span>
+					</p>
+					<img src="radModel.jpg" width="30%"> 
+				</td>
+			</tr>
+			<tr>
+				<td>
 					<h2 id="content2-h2">Development Tools</h2>
 					<p id="content2-p">
 							&#8227; IDE: Android Studio
@@ -130,14 +168,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2" style="border: 2px solid black">
+				<td>
 					<h2 id="content2-h2">Functions</h2>
-				</td>
-			</tr>
-			<tr>
-				<td style="border: 2px solid black">
 					<p id="content2-p">
-						<span id="span3"> For Organizer(Staff or Club's Secretary) </span>
+						<span id="span3">For Organizer(Staff or Club's Secretary)</span>
 						<ul>
 							<li>Login/ Logout/ Retrieve password/ Change password</li>
 							<li>View event details</li>
@@ -151,8 +185,6 @@
 							<li>View/ Update profile name</li>
 						</ul>
 					</p>	
-				</td>
-				<td style="border: 2px solid black">
 					<p id="content2-p">
 						<span id="span3"> For Participants </span>
 						<ul>
@@ -168,6 +200,20 @@
 				</td>
 			</tr>
 		</table>
+	</div>
+	<hr>
+	<div id="bottom" align="center">
+		<table style="table-layout: fixed; border: 2px solid black" width="100%">
+			<tr>
+				<td>
+					<h2 id="span1">Download</h2>
+					<p>Download the app <a href="https://drive.google.com/file/d/1Dy5fjmjdfBMDp2FfQ1IeBZDrUedjoxZG/view?usp=sharing">here</a> and try to check-in now!</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div align="center">
+		<p>&#169; 2019. Hew Chin Hui.</p>
 	</div>
 </body>
 </html>
