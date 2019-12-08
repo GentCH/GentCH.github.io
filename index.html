@@ -2,16 +2,6 @@
 <html>
 <head>
 	<title>EventAIO - Event Management Application</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-  		$("p").click(function(){
-    		$("#content2-p").fadeOut();
-    		$("#div2").fadeIn("slow");
-    		$("#div3").fadeIn(3000);
- 		 });
-		});
-	</script>
 	<style type="text/css">
 		body{
 			background-image: linear-gradient(to right, rgba(38, 27, 98, 0.9), rgba(208, 204, 255, 1));
@@ -42,7 +32,7 @@
 			font-size: 14px;
 			text-align: justify;
 		}
-		#content1-p, #content1-p, li{
+		#content1-p, #content2-p, li{
 			font-size: 12px;
 		}
 		#content1-h2, #content2-h2{
@@ -55,13 +45,21 @@
 			font-size: 14px;
 		}
 	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+  			$("p").click(function(){
+    			$("#content2-p").fadeOut("slow");
+ 			});
+		});
+	</script>
 </head>
 <body >
 	<div id="top" align="center">
-		<table style="table-layout: fixed; border: 2px solid black" width="65%">
+		<table style="table-layout: fixed; border: 2px solid black">
 			<tr>
 				<td id="top-tr1" align="right">
-					<img src="idea.png" width="100%">
+					<img src="idea.png" width="50%">
 				</td>
 				<td id="top-tr2">
 					<h1>EventAIO <br>
@@ -74,7 +72,7 @@
 	</div>
 	<hr>
 	<div id="content1" align="center">
-		<table style="table-layout: fixed; border: 2px solid black" width="45%">
+		<table style="table-layout: fixed; border: 2px solid black">
 			<tr>
 				<td>
 					<h2 id="content1-h2">Introduction</h2>
@@ -128,7 +126,7 @@
 	</div>
 	<hr>
 	<div id="content2" align="center">
-		<table style="table-layout: fixed; border: 2px solid black" width="45%">
+		<table style="table-layout: fixed; border: 2px solid black">
 			<tr>
 				<td colspan="2">
 					<h2 id="content2-h2">Development Tools</h2>
