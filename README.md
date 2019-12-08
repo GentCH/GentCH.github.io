@@ -31,3 +31,5 @@ For Organization (staff/club secretary):
   <li>Add/Delete reminder</li>
   <li>View/Update profile name</li>
 </ul>
+
+<h3>MORE DETAILS: https://gentch.github.io/</h3>
