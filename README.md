@@ -1,5 +1,4 @@
-# gentch.github.io
-Introduction to EventAIO - Event Management Application with QR Code and Geolocation Technology
+# EventAIO - Event Management Application with QR Code and Geolocation Technology
 </br><b>VERY IMPORTANT: The application is developed for completing my final year project.</b>
 <h3>Development Tools:</h3>
 IDE: Android Studio
