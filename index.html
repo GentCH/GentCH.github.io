@@ -8,7 +8,7 @@
 		}
 		h1{
 			color: rgba(38, 27, 98, 1);
-			font-size: 36px;
+			font-size: 40px;
 		}
 		table{
 			padding: 20px;
@@ -22,7 +22,6 @@
 		}
 		.navigation-a{
 			color: rgba(208, 204, 255, 1);
-			font-size: 12px;
 			font-weight: bold;
 			padding-right: 15px;
 		}
@@ -34,26 +33,31 @@
 			padding-right: 20px;
 		}
 		#span1{
-			font-size: 28px;
+			font-size: 36px;
 		}
 		#span2{
 			padding-left: 80px;
-		}
-		#top-p{
-			font-size: 18px;
-		}
-		#content1-p, #content2-p, li{
-			font-size: 12px;
-		}
-		#content1-h2, #content2-h2{
-			color: rgba(38, 27, 98, 1);
-			font-size: 20px;
-			text-decoration: underline;
 		}
 		#span3{
 			font-weight: bold;
 			font-size: 14px;
 		}
+		#span4{
+			font-size: 22px;
+		}
+		#content1-p, #content2-p, #content3-p, #bottom-p1, li{
+			font-size: 12px;
+		}
+		#content1-h2, #content2-h2, #content3-h2, #bottom-h2{
+			color: rgba(38, 27, 98, 1);
+			font-size: 20px;
+			text-decoration: underline;
+		}
+		#bottom-p2{
+			font-size: 12px;
+			font-style: italic;
+		}
+		
 	</style>
 </head>
 <body>
@@ -61,25 +65,30 @@
 		<a class="navigation-a" href="#top">Home</a>
 		<a class="navigation-a" href="#content1">Problems</a>
 		<a class="navigation-a" href="#content2">Development</a>
+		<a class="navigation-a" href="#bottom">Features</a>
 		<a class="navigation-a" href="#bottom">Download</a>
 	</div>
 	<div id="top" align="center">
-		<table style="table-layout: fixed; border: 2px solid black">
+		<table style="table-layout: fixed;">
 			<tr>
-				<td id="top-tr1" align="right" width="30%" style="border: 2px solid black">
+				<td id="top-tr1" align="right" width="30%">
 					<img src="idea.png" width="100%">
 				</td>
 				<td id="top-tr2">
 					<h1>EventAIO <br>
 					<span id="span1">Event Management Application <br> with QR Code <br> and Geolocation Technology</span></h1>
-					<p id="top-p">More convenient way to manage event ... ... <br>
-					<span id="span2"> ... ... Better way to check-in for an event </span> </p>
+					<p>
+						<span id="span4">More convenient way to manage event ... ... 
+						<br>
+						<span id="span2"> ... ... Better way to check-in for an event </span></span>
+					</p>
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2">
+					<h2 id="content1-h2">Introduction</h2>
 					<p id="content1-p" style="text-align: justify;">
-						To ensure events to hold as planned, safeguard the flow of the event, increase participants’ satisfaction level, and deliver a unique experience to the participants, a suitable and good event management system is required. EventAIO is an application developed with the aim to provide a more convenient way for event organizer in managing event and deliver a better experience for participants during event check-in process.
+						Education institutions often hold events under sport, culture, talk or seminar category and et cetera. The increasing number of students involved in the events indicates their enthusiasm for participating in the events organized by educational institutions. Participants are required to check-in for the event participated as proof that they attended the event. Regrettably, both organizers and participants encountered several issues during the check-in process. EventAIO is an event management mobile application with QR code and geolocation technology proposed with the intention to minimize the problems faced by the participants and organizer during an event check-in process. The application generates QR code with unique data upon adding an event. The students are required to scan the correct QR code within the specified range at the venue for success check-in. The QR code and geolocation technology implemented in the event management application assist in minimizing the likelihood of fake attendance, human error, and unexpected accidents which could obstruct the check-in process.
 					</p>
 				</td>
 			</tr>
@@ -87,7 +96,7 @@
 	</div>
 	<hr>
 	<div id="content1" align="center">
-		<table style="table-layout: fixed; border: 2px solid black" width="100%">
+		<table style="table-layout: fixed;" width="100%">
 			<tr>
 				<td>
 					<h2 id="content1-h2">Target User</h2>
@@ -147,7 +156,7 @@
 	</div>
 	<hr>
 	<div id="content2" align="center">
-		<table style="table-layout: fixed; border: 2px solid black" width="100%">
+		<table style="table-layout: fixed;" width="100%">
 			<tr>
 				<td>
 					<h2 id="content2-h2">Methodology</h2>
@@ -169,8 +178,42 @@
 			</tr>
 			<tr>
 				<td>
-					<h2 id="content2-h2">Functions</h2>
+					<h2 id="content2-h2">Firebase Realtime Database and Firebase Storage</h2>
 					<p id="content2-p">
+						Realtime is the process by which the data are handled quickly or instantly as it is happening “live” and there is no noticeable delay experienced by the user. Since Firebase is a hosted cloud service, it solves the limitation of the intranet web-based event management system for an organization. All data are accessible to the user, at any place, when they are connected to the Internet. By implementing this technology in the application, event organizers are able to make any last-minute changes at any place and users are able to view changes instantaneously.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2 id="content2-h2">QR Code Technology</h2>
+					<p id="content2-p">
+						The application will retrieve the event’s name from the user’s input and combine it with a randomly generated string of 10 characters to generate a QR code with unique data. Then, the event organizer can view and download the generated QR code. A student is required to scan the QR code to check-in. SCanning the wrong QR code will result in unsuccessful check-in.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h2 id="content2-h2">Geolocation Technology</h2>
+					<p id="content2-p">
+						Geolocation technology is used in detecting the user’s location for check-in function in the application. There is a defined range for check-in for each location. Hence, participants have to attend the event to scan the QR code at the event venue within the defined range to check-in for the event. The user has to enable the device’s GPS or location setting for the application to detect location. For example, the image below shows the available range for check-in at a venue named "Dewan Kompleks Sukan (KSU)". The valid range for the venue is 50 meter.
+					</p>
+					<p id="content2-p">
+						<span id="span3">Haversine Formula</span>
+						<br>The Haversine Formula used to calculate the distance between the device and the specified location. This formula is important in navigation. The formula determines the shortest distance between two points on a sphere, using their latitudes and longitudes.
+					</p>
+					<img src="geolocationDIagram.jpg" width="30%">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<hr>
+	<div id="content3" align="center">
+		<table style="table-layout: fixed;" width="100%">
+			<tr>
+				<td>
+					<h2 id="content3-h2">Application Features</h2>
+					<p id="content3-p">
 						<span id="span3">For Organizer(Staff or Club's Secretary)</span>
 						<ul>
 							<li>Login/ Logout/ Retrieve password/ Change password</li>
@@ -185,7 +228,7 @@
 							<li>View/ Update profile name</li>
 						</ul>
 					</p>	
-					<p id="content2-p">
+					<p id="content3-p">
 						<span id="span3"> For Participants </span>
 						<ul>
 							<li>Login/ Logout/ Retrieve password/ Change password</li>
@@ -203,15 +246,17 @@
 	</div>
 	<hr>
 	<div id="bottom" align="center">
-		<table style="table-layout: fixed; border: 2px solid black" width="100%">
+		<table style="table-layout: fixed;" width="100%">
 			<tr>
 				<td>
-					<h2 id="span1">Download</h2>
-					<p>Download the app <a href="https://drive.google.com/file/d/1Dy5fjmjdfBMDp2FfQ1IeBZDrUedjoxZG/view?usp=sharing">here</a> and try to check-in now!</p>
+					<h2 id="bottom-h2">Download</h2>
+					<p id="bottom-p1">Download the app <a href="https://drive.google.com/file/d/1Dy5fjmjdfBMDp2FfQ1IeBZDrUedjoxZG/view?usp=sharing">here</a> and try to check-in now!</p>
+					<p id="bottom-p2">PS: request login details from the owner</p>
 				</td>
 			</tr>
 		</table>
 	</div>
+	<hr>
 	<div align="center">
 		<p>&#169; 2019. Hew Chin Hui.</p>
 	</div>
